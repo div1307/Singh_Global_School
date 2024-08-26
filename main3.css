@@ -1,0 +1,254 @@
+body{
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    margin-left: 2em;
+}
+h2,h3{
+    color: crimson;
+    border-bottom: 2px solid darkgoldenrod;
+    text-align: center;
+}
+header{
+    font-size: 250%;
+    text-shadow: 4px 3px 4px green;
+    border: 5px dashed green;
+    color: crimson;
+    padding: .4em;
+    margin: .6em;
+    text-align: center;
+    background-image: url("../img/background_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#wrapper{
+    background-color: lemonchiffon;
+    border: 3px solid darkgoldenrod;
+    margin: 0 auto;
+    width: 68.13% ;
+    min-width: 902px;
+
+}
+main, footer, aside, article, section{
+    border: 5px dashed green;
+    padding:  1em;
+    margin: 1.5em;
+}
+.button{
+    text-decoration: none;
+    border: 4px solid darkgoldenrod;
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 6px green;
+    background-image: linear-gradient(to top, palevioletred 0%, crimson 80%);
+    color: lemonchiffon;
+}
+nav p{
+    margin: 0;
+    margin-bottom: 1em;
+}
+ #logo{
+     width: 100px;
+     position: absolute;
+     left: 20px;
+     top: 10px;
+     transform: rotate(270deg);
+ }
+header{
+    position: relative;
+}
+@font-face {
+    font-family: articlefont;
+    src: url("../font/Newsreader-Regular.ttf");
+}
+header, aside, main, section, article, footer{
+    font-family: articlefont,sans-serif;
+}
+nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 12px;
+}
+nav li {
+    text-align: center;
+}
+p a:hover{
+    color: black;
+    border-color: black;
+}
+p a:focus{
+    color: black;
+    border-color: black;
+}
+#horizontal ul {
+    display: flex;
+    justify-content: center;
+}
+#horizontal li a {
+    display: block;
+    color: lemonchiffon;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 0;
+}
+#horizontal li a:hover:not(.active) {
+    background-color: green;
+}
+#horizontal li a:focus {
+    background-color: green;
+}
+.active {
+    background-color: black;
+}
+#horizontal{
+    margin: 0;
+    padding: 0;
+    background-color: darkgoldenrod;
+}
+#wrapper{
+    border-top: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+#horizontal, header, footer, article, aside, main{
+    flex-basis: 100%;
+}
+#catwink{
+    width: 300px;
+    height: 345px;
+    background-image: url("../img/image_rollover_1.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transform: rotate(270deg);
+}
+#catwink:hover{
+    background-image: url("../img/image_rollover_2.jpeg");
+    background-size: cover;
+    background-position: center;
+    transform: none;
+}
+#map img{
+    float: left;
+    margin: 2rem;
+    margin-bottom: 1rem;
+    transform: rotate(270deg);
+}
+li p:nth-child(3), li p:nth-child(4), li p:last-child{
+    margin-left: 11rem;
+}
+ul+p{
+    color: green;
+    font-size: 120%;
+}
+#table, #table1{
+    column-span: all;
+}
+table, th, td{
+    border: 2px solid darkgoldenrod;
+    border-collapse: collapse;
+}
+table{
+    width: 80%;
+}
+td, th{
+    padding: 1em;
+}
+tbody td:first-child, tbody td:last-child, tfoot td:last-child{
+    text-align: right;
+}
+tbody td:nth-child(2){
+    text-align: center;
+}
+tfoot,thead{
+    background-color: lightblue;
+}
+.odd>tr:nth-child(odd){
+    background-color: silver;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.insidelefttable{
+    text-align: left;
+}
+.insiderighttable{
+    caption-side: bottom;
+}
+#myForm{
+    display: flex;
+    flex-wrap: wrap;
+}
+#myForm h2{
+    flex-basis: 100%;
+}
+#myForm form{
+    flex: 1 1 0;
+}
+fieldset{
+    height: 90%;
+    padding-top: 2rem;
+}
+fieldset label:not(.myLabels, .iagree){
+    display: inline-block;
+    width: 10rem;
+    text-align: right;
+    vertical-align: top;
+}
+fieldset input:not(.buttons){
+    width: 47%;
+}
+fieldset input, .buttons, select{
+    margin-left: .5em;
+    margin-bottom: 1em;
+}
+#resume, #postal, #country{
+    width: 25%;
+}
+.iagree{
+    width: 12rem;
+    margin-top: 2rem;
+}
+.iagree.buttons{
+    width: auto;
+}
+.myButtons{
+    width: max-content;
+    margin: 0 auto;
+}
+.myButtons>*{
+    margin-bottom: 0;
+}
+input:required{
+    border: 3px solid darkgoldenrod;
+}
+input:valid{
+    border: 1px solid crimson;
+}
+input:invalid{
+    background-color: lightgray;
+}
+@media only screen and (max-device-width: 900px){
+    main{
+        background-color: hotpink;
+    }
+    article{
+        column-count: 1;
+    }
+    #horizontal{
+        display: none;
+    }
+    #wrapper{
+        border-top: 3px solid darkgoldenrod;
+        flex-direction: column;
+    }
+}
